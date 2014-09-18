@@ -2,8 +2,14 @@ body{
     margin: 0px;
     padding: 0px;
 }
-.scene .item-center{
+.scene{
     display: block;
     position: relative;
+}
+.scene .item{
+    display: block;
+    position: relative;
+}
+.scene .item-center{
     text-align: center;
 }

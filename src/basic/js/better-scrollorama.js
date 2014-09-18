@@ -9,41 +9,72 @@
             onSceneActive: false,
             onSceneLeave: false,
             sceneName: '.scene',
+            itemName: '.item',
             parentBox: "document"                               // default is currently window
         }, options );
 
+
+        // MODEL
+
         var bs = this;
+        var wWidth = 0;
+        var wHeight = 0;
 
-        if(settings.parentBox == "document"){
-            $('body').css({ overflowY : 'scroll'});
-            var wWidth = $("body").innerWidth();                // setting parent width for scene width
-            var wHeight = $(document).height();                 // setting parent height for scene height
-        }
-        else{
-            $(settings.parentBox).css("overflow", "scroll");
-            var wWidth = $(settings.parentBox).width();         // setting parent width for scene width
-            var wHeight = $(settings.parentBox).height();       // setting parent height for scene height
-        }
-
-        // TRIGGER EVENTS
-        bs.triggerEvent = function(event){
-
+        // Validate ParentBox height and width
+        // and make sure scroll is activated all the time.
+        bs.validateParentBox = function(){
+            if(settings.parentBox == "document"){
+                $('body').css({ overflowY : 'scroll'});
+                wWidth = $("body").innerWidth();                // setting parent width for scene width
+                wHeight = $(document).height();                 // setting parent height for scene height
+            }
+            else{
+                $(settings.parentBox).css("overflow", "scroll");
+                wWidth = $(settings.parentBox).width();         // setting parent width for scene width
+                wHeight = $(settings.parentBox).height();       // setting parent height for scene height
+            }
         };
 
-        // INITIALIZE MAIN TIMELINE
+        // Initialize Main Scene Timeline
         var timeline = new TimelineLite();
 
-        // VALIDATE SCENES
+        // Validate Scene Items
+        bs.validateItems = function(scene){
+            scene.find(settings.itemName).each(function(){
+                if($(this).hasClass("item-vertical-center")){
+                    bs.alignment.vertical(this);
+                }
+            });
+        };
+
+        // Validate Scenes
         bs.validateScenes = function(){
             $(this).find(settings.sceneName).each(function(){
                 $(this).css("width", wWidth + "px");
                 $(this).css("height", wHeight + "px");
-                $(this).css("display", "block");
-                $(this).css("position", "relative");
+                bs.validateItems($(this));
             });
         };
 
-        // MAIN EXECUTIONS
+        // CONTROLS
+        // Alignment Handlings
+        bs.alignment = {
+            vertical: function(item){
+                itemPercent = 50 - parseInt(  ($(item).height() / 2) / wHeight * 100 );
+                $(item).css({top:itemPercent+'%'});
+            },
+            horizontal: function(item){
+                // no execution yet
+            }
+        };
+
+        // TRIGGERS
+        bs.triggerEvent = function(event){
+
+        };
+
+        // Main Execution
+        bs.validateParentBox();
         bs.validateScenes();
 
         return bs;
