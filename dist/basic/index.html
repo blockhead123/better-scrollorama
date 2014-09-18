@@ -3,53 +3,28 @@
 <html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <title>Veritical Slide CSS JQuery</title>
+  <title>Better Scrollorama</title>
+    <link href="css/better-scrollorama.min.css" media="all" rel="stylesheet" type="text/css"  />
   <script type='text/javascript' src='//code.jquery.com/jquery-1.10.1.js'></script>
-    <script type='text/javascript' src='js/bvs.min.js'></script>
-    <link href="css/bvs.min.css" media="all" rel="stylesheet" type="text/css"  />
-    <style type="text/css">
-        .leftbox{
-            background-color:orange;
-        }
-        .rightbox{
-            background-color:green;
-        }
-        .middlebox{
-            background-color:yellow;
-        }
-    </style>
+    <script type='text/javascript' src='js/better-scrollorama.min.js'></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"/></script>
     <script type='text/javascript'>//<![CDATA[
     $(function(){
-        $(".box").bvs({
-            onStart: function(){
-                console.log("box animation started");
-            },
-            onComplete: function(){
-                console.log("box animation completed");
-            },
-            onHoverOut: function(){
-                console.log("box animation hover out");
-            }
-        });
+        $(".scroll").betterScrollorama();
     });//]]>
-
     </script>
 </head>
 <body>
 
-<div class="box leftbox">
-</div>
-<div class="box middlebox">
-</div>
-<div class="box rightbox">
-</div>
-<div class="box middlebox">
-</div>
-<div class="box rightbox">
-</div>
-<div class="box leftbox">
-</div>
-<div class="box rightbox">
+<div class="scroll">
+    <div class="scene">
+        <div class="item item-center item-vertical-center" bs-fadein="true">
+            The quick brown fox!
+        </div>
+    </div>
+    <div bs-pin="1000" class="scene" style="background-color: gray">
+        I'm pinning
+    </div>
 </div>
 
 </body>
