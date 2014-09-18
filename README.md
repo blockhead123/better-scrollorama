@@ -1,6 +1,6 @@
 Better Scrollorama
 ==================
-A new improve scrollorama with a different twist.
+A new improve scrollorama with a different twist. Plugin is still in its alpha stage and i do suggest not using it yet.
 
 Example
 --------
@@ -40,12 +40,12 @@ Events
     });
     </script>
 
-* 'onSceneActive' : executed when there is a scene active.
+* 'onSceneActive' : executed when there is a scene active. (not implemented yet)
 
     Parameters :
     + object : current box object
 
-* 'onSceneLeave' : executed on animation complete
+* 'onSceneLeave' : executed on animation complete.  (not implemented yet)
 
     Parameters :
     + object : current box object
