@@ -35,7 +35,7 @@ Events
 -------
 
     <script>
-    $(".box").betterScrollorama({
+    $(".scroll").betterScrollorama({
         'onSceneActive' : function (v) { /*make something*/ }
     });
     </script>
