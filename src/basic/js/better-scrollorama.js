@@ -9,22 +9,20 @@
             onSceneActive: false,
             onSceneLeave: false,
             sceneName: '.scene',
-            parentBox: "document"                                   // default is currently window
+            parentBox: "document"                               // default is currently window
         }, options );
 
         var bs = this;
 
-
-
         if(settings.parentBox == "document"){
             $('body').css({ overflowY : 'scroll'});
-            var wWidth = $("body").innerWidth();        // setting parent width for scene width
-            var wHeight = $(document).height();           // setting parent height for scene height
+            var wWidth = $("body").innerWidth();                // setting parent width for scene width
+            var wHeight = $(document).height();                 // setting parent height for scene height
         }
         else{
             $(settings.parentBox).css("overflow", "scroll");
-            var wWidth = $(settings.parentBox).width();        // setting parent width for scene width
-            var wHeight = $(settings.parentBox).height();           // setting parent height for scene height
+            var wWidth = $(settings.parentBox).width();         // setting parent width for scene width
+            var wHeight = $(settings.parentBox).height();       // setting parent height for scene height
         }
 
         // TRIGGER EVENTS
