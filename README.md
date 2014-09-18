@@ -25,11 +25,18 @@ Example
 Options
 -------
 
-* 'sceneName' : name of scene
+* 'sceneName' : name of scene element
 
     Parameters :
-    + object : element
+    + object : element you can use either id class or anything else
     Default : '.scene'
+    
+* 'parentBox' : is used to detect the parent of the plugin. used for validating the height of each of the scenes.
+
+    Parameters :
+    + object : element you can use either id class or anything else
+    Default : '.scene'
+    
 
 Events
 -------
