@@ -1,1 +1,1 @@
-body{margin:0;padding:0}.scene .item-center{display:block;position:relative;text-align:center}
+body{margin:0;padding:0}.scene,.scene .item{display:block;position:relative}.scene .item-center{text-align:center}.bs-spacer{display:block;position:relative;background-color:green}

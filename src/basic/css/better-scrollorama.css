@@ -13,3 +13,8 @@ body{
 .scene .item-center{
     text-align: center;
 }
+.bs-spacer{
+    display: block;
+    position: relative;
+    background-color: green;
+}
