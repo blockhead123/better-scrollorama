@@ -31,6 +31,12 @@ Options
     + object : element you can use either id class or anything else
     Default : '.scene'
     
+* 'itemName' : name of item element
+
+    Parameters :
+    + object : element you can use either id class or anything else
+    Default : '.item'
+    
 * 'parentBox' : is used to detect the parent of the plugin. used for validating the height of each of the scenes.
 
     Parameters :
@@ -46,6 +52,13 @@ Events
         'onSceneActive' : function (v) { /*make something*/ }
     });
     </script>
+
+* 'onScroll' : executed on scroll
+
+    Parameters :
+    + object : current box object
+    + returns : tweenmax object
+
 
 * 'onSceneActive' : executed when there is a scene active. (not implemented yet)
 
