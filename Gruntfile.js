@@ -18,7 +18,7 @@ module.exports = function(grunt) {
         uglify: {
             dist: {
                 files: {
-                    'dist/basic/js/bvs.min.js': ['src/basic/js/better-scrollorama.js']
+                    'dist/basic/js/better-scrollorama.min.js': ['src/basic/js/better-scrollorama.js']
                 }
             }
         },

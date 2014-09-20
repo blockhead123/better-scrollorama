@@ -2,7 +2,10 @@
 
     $.fn.betterScrollorama = function( options ) {
 
-        // DEFAULT OPTIONS
+        /**
+         * DEFAULT OPTIONS
+         * @type {*}
+         */
         var settings = $.extend({
             // These are the defaults.
             // These are the events
@@ -17,19 +20,32 @@
 
         // MODEL
 
+        // Private options
         var bs = this;
         var wWidth = 0;
         var wHeight = 0;
+        var firstSceneHeight = 0;
+        var dummy = new Array();
 
-        // Set Spacers
+        /**
+         * Set Spacers
+         *
+         * @param scene
+         * @returns {number}
+         */
         bs.validatePins = function(scene){
+            var sceneHeight = wHeight;
             if(parseInt(scene.attr("bs-pin"))>0){
                 scene.before('<div class="bs-spacer" style="height: '+parseInt(scene.attr("bs-pin"))+'px;"></div>')
+                sceneHeight = parseInt(scene.attr("bs-pin"));
             }
+            return sceneHeight;
         };
 
-        // Validate ParentBox height and width
-        // and make sure scroll is activated all the time.
+        /**
+         * Validate ParentBox height and width
+         * and make sure scroll is activated all the time.
+         */
         bs.validateParentBox = function(){
             if(settings.parentBox == "document"){
                 $('body').css({ overflowY : 'scroll'});
@@ -46,28 +62,62 @@
         // Initialize Main Scene Timeline
         var tl = new TimelineLite();
 
-        // Add Tweens To Main Timeline
-        bs.addSceneTween = function(scene, tweenName, dur, arg){
+        /**
+         * Add Tweens To Main Timeline
+         * @param {scene} object
+         * @param {tweenName} string
+         * @param {dur} number
+         * @param {arg} array
+         * @param {index} number
+         */
+        bs.addSceneTween = function(scene, tweenName, dur, arg, index){
+
             if(parseInt(scene.attr("bs-pin"))>0){
                 var cDur = parseInt(scene.attr("bs-pin"));
             }
             else{
                 var cDur = dur;
             }
-            console.log(cDur);
+
+            var dummyDetails = {
+                scene: ".scene" + index
+            };
+
+            dummy.push(dummyDetails);
+
             tl.add( TweenLite.to($(tweenName), cDur, arg));
         };
 
-        // Add Dummy Tweens
-        bs.addSTDummy = function(scene, dur){
-            bs.addSceneTween(scene,".dummy",dur,{left: 100, onStart: function(){
-                console.log("yep");
+        /**
+         * Add Dummy Tweens
+         *
+         * @param {scene} jQuery
+         * @param {dur} number
+         * @param {index} number
+         */
+        bs.addSTDummy = function(scene, dur, index){
+            bs.addSceneTween(scene,".dummy"+index,dur,{left: 100, onStart: function(){
+
+                var dummyClass = this.target.selector;
+                var index = dummyClass.replace(/\D/g, '');
+
+                bs.triggerEvent("activeScene", {index: index});
+
             }, onReverseComplete: function(){
-                console.log("yep");
-            }})
+
+                var dummyClass = this.target.selector;
+                var index = dummyClass.replace(/\D/g, '');
+
+                bs.triggerEvent("activeScene", {index: index});
+
+            }}, index)
         };
 
-        // Validate Scene Items
+        /**
+         * Validate Scene Items
+         *
+         * @param {scene} jquery
+         */
         bs.validateItems = function(scene){
             scene.find(settings.itemName).each(function(){
                 if($(this).hasClass("item-vertical-center")){
@@ -76,23 +126,49 @@
             });
         };
 
-        // Validate Scenes
+        /**
+         * Validate Scenes
+         */
         bs.validateScenes = function(){
-            $(this).find(settings.sceneName).each(function(){
+            $(this).find(settings.sceneName).each(function(index){
+                var sceneHeight = 0;
                 $(this).css("width", wWidth + "px");
                 $(this).css("height", wHeight + "px");
+                $(this).addClass("scene"+index);
                 bs.validateItems($(this));
-                bs.validatePins($(this));
-                bs.addSTDummy($(this), wHeight);
+                sceneHeight = bs.validatePins($(this));
+                if(index == 0){
+                    firstSceneHeight = sceneHeight;
+                }
+                bs.addSTDummy($(this), wHeight, index);
             });
         };
 
-        // Get Active Scene
-        bs.getActiveScene = function(){
+        /**
+         * Validates if it has a Pin
+         *
+         * @param {scene} jQuery Element
+         */
+        bs.hasPin = function(scene){
+            if(parseInt($(scene).attr("bs-pin"))>0){
+            }
+        }
+
+        /**
+         * Get Active Scene
+         *
+         * @param index
+         * @returns {null}
+         */
+        bs.getActiveScene = function(index){
+            return null;
         };
 
         // CONTROLS
-        // Alignment Handlings
+        /**
+         * Alignment Handlings
+         * @type {{vertical: vertical, horizontal: horizontal}}
+         */
         bs.alignment = {
             vertical: function(item){
                 itemPercent = 50 - parseInt(  ($(item).height() / 2) / wHeight * 100 );
@@ -103,7 +179,7 @@
             }
         };
 
-        // Execture Scroll
+        // Execute Scroll
         bs.scrollExec = function(pBox){
             if(pBox == "document"){
                 var parentBoxP = document;
@@ -118,26 +194,26 @@
                     settings.onScroll(this);
                 }
                 var cTop = $(document).scrollTop();
-                tl.seek(cTop, false);
+                tl.seek(cTop + firstSceneHeight, false);
             });
 
         };
 
         // Pin a scene
         bs.pin = function(scene){
-
         };
 
         // TRIGGERS
-        bs.triggerEvent = function(event){
-
+        bs.triggerEvent = function(event, args){
+            if(event == "activeScene"){
+                var scene = dummy[args.index].scene;
+            }
         };
 
         // Main Execution
         bs.validateParentBox();
         bs.validateScenes();
         bs.scrollExec(settings.parentBox);
-        console.log(tl);
         return bs;
 
     };
