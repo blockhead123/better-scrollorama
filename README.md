@@ -1,6 +1,7 @@
 Better Scrollorama
 ==================
-A new improve scrollorama with a different twist. Plugin is still in its alpha stage and i do suggest not using it yet.
+
+    A new improve scrollorama with a different twist. Plugin is still in its alpha stage and i do suggest not using it yet.
 
 Example
 --------
