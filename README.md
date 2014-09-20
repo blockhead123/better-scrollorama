@@ -22,6 +22,30 @@ Example
     </div>
 
 
+Structure
+---------
+
+    The basic structure of BS is that controls are being handled on the div it self. 
+    If you want to make an item fade-in then you add "bs-fadein" or if you want to 
+    pin a specific scene then you go with "bs-pin".
+    
+    Main Div
+        |
+        |-----> Scene
+                    |
+                    |----> Item
+                    
+    An Example for fading items:
+    
+        <div class="scene">
+            <div class="item" bs-fadein="true"></div>
+        </div>
+        
+    An Example for adding pins:
+    
+        <div class="scene" bs-pin="1000">
+        </div>
+
 Options
 -------
 
