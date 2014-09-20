@@ -84,7 +84,7 @@ Events
     + returns : tweenmax object
 
 
-* 'onSceneActive' : executed when there is a scene active. (not implemented yet)
+* 'onSceneActive' : executed when there is a scene active.
 
     Parameters :
     + object : current box object
