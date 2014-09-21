@@ -51,20 +51,26 @@ Structure
 Scene Parameters
 ----------------
     
-    + bs-pin: used to pin the scene (incomplete implementation)
-        + paramters: {decimal}
-    + bs-fadein: used to fade-in the scene (not implemented)
-        + parameters: {boolean}
-    + bs-fadeout: used to fade-out the scene (not implemented)
-        +parameters: {boolean}
-    + bs-tween: tween type  (not implemented)
-        + parameters: {tween name}
+    | Name    | Parameter | Description                                       |
+    | ------- | --------- | ------------------------------------------------- |
+    | bs-pin  | decimal   | used to pin the scene (incomplete implementation) |
+        paramters: 
+        
+    bs-fadein: used to fade-in the scene (not implemented)
+        parameters: {boolean}
+        
+    bs-fadeout: used to fade-out the scene (not implemented)
+        parameters: {boolean}
+        
+    bs-tween: tween type  (not implemented)
+        parameters: {tween name}
+        
     
 Item Parameters
 ---------------
 
-    + bs-fadein: used to fade-in the item  (not implemented)
-        + parameters: {boolean}
+    bs-fadein: used to fade-in the item  (not implemented)
+        parameters: {boolean}
     + bs-fadeout: used to fade-out the item  (not implemented)
         + parameters: {boolean}
     + bs-tween: tween type  (not implemented)
