@@ -47,6 +47,39 @@ Structure
     
         <div class="scene" bs-pin="1000">
         </div>
+        
+Scene Parameters
+----------------
+    
+    bs-pin: used to pin the scene (incomplete implementation)
+        paramters: {decimal}
+    
+    bs-fadein: used to fade-in the scene (not implemented)
+        parameters: {boolean}
+        
+    bs-fadeout: used to fade-out the scene (not implemented)
+        parameters: {boolean}
+        
+    bs-tween: tween type  (not implemented)
+        parameters: {tween name}
+    
+Item Parameters
+
+    bs-fadein: used to fade-in the item  (not implemented)
+        parameters: {boolean}
+        
+    bs-fadeout: used to fade-out the item  (not implemented)
+        parameters: {boolean}
+        
+    bs-tween: tween type  (not implemented)
+        parameters: {tween name}
+        
+    bs-anim-to: animation from current state to the new state
+        parameters: {array}
+            anim: type of property the animation is going to do
+                property: name of property
+                value: value of the property
+            dur: {decimal} lenght by scroll
 
 Options
 -------
