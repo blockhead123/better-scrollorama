@@ -64,6 +64,7 @@ Scene Parameters
         parameters: {tween name}
     
 Item Parameters
+---------------
 
     bs-fadein: used to fade-in the item  (not implemented)
         parameters: {boolean}
