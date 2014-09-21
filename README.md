@@ -61,18 +61,17 @@ Scene Parameters
 Item Parameters
 ---------------
 
-    bs-fadein: used to fade-in the item  (not implemented)
-        parameters: {boolean}
-    + bs-fadeout: used to fade-out the item  (not implemented)
-        + parameters: {boolean}
-    + bs-tween: tween type  (not implemented)
-        + parameters: {tween name}
-    + bs-anim-to: animation from current state to the new state
-        + parameters: {array}
-            + anim: type of property the animation is going to do
-                + property: name of property
-                + value: value of the property
-            + dur: {decimal} lenght by scroll
+| Name       | Parameter | Description                                       |
+| ---------- | --------- | ------------------------------------------------- |
+| bs-fadein  | boolean   | used to fade-in the item  (not implemented)       |
+| bs-fadeout | boolean   | used to fade-out the item  (not implemented)      |
+| bs-tween   | tween     | tween type  (not implemented)                     |
+| bs-anim-to | animation from current state to the new state                 |
+|            | array     |                                                   |
+|            |           | anim | type of property is goint to do            |
+|            |           |      | property | name of property                |
+|            |           |      | value    | value of the property           |
+|            |           | dur  | {decimal} lenght by scroll                 |
 
 Options
 -------
