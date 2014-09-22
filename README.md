@@ -68,9 +68,10 @@ Item Parameters
 | bs-tween   | tween     | tween type  (not implemented)                     |
 | bs-anim-to | array     | animation from current state to the new state     |
 |            |           | |anim | type of property is goint to do  |        |
-|            |           | |     | property | name of property      |        |
-|            |           | |     | value    | value of the property |        |
-|            |           | |dur  | decimal  | lenght by scroll      |        |
+|            |           | |     |                                  |        |
+|            |           | |     | property   name of property      |        |
+|            |           | |     | value      value of the property |        |
+|            |           | |dur  | decimal    lenght by scroll      |        |
 
 Options
 -------
