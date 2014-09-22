@@ -66,12 +66,11 @@ Item Parameters
 | bs-fadein  | boolean   | used to fade-in the item  (not implemented)       |
 | bs-fadeout | boolean   | used to fade-out the item  (not implemented)      |
 | bs-tween   | tween     | tween type  (not implemented)                     |
-| bs-anim-to | animation from current state to the new state                 |
-|            | array     |                                                   |
-|            |           | anim | type of property is goint to do            |
-|            |           |      | property | name of property                |
-|            |           |      | value    | value of the property           |
-|            |           | dur  | {decimal} lenght by scroll                 |
+| bs-anim-to | array     | animation from current state to the new state     |
+|            |           | |anim | type of property is goint to do  |        |
+|            |           | |     | property | name of property      |        |
+|            |           | |     | value    | value of the property |        |
+|            |           | |dur  | decimal  | lenght by scroll      |        |
 
 Options
 -------
