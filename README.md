@@ -60,18 +60,60 @@ Scene Parameters
 
 Item Parameters
 ---------------
-
-| Name       | Parameter | Description                                       |
-| ---------- | --------- | ------------------------------------------------- |
-| bs-fadein  | boolean   | used to fade-in the item  (not implemented)       |
-| bs-fadeout | boolean   | used to fade-out the item  (not implemented)      |
-| bs-tween   | tween     | tween type  (not implemented)                     |
-| bs-anim-to | array     | animation from current state to the new state     |
-|            |           | |anim | type of property is goint to do  |        |
-|            |           | |     |                                  |        |
-|            |           | |     | property   name of property      |        |
-|            |           | |     | value      value of the property |        |
-|            |           | |dur  | decimal    lenght by scroll      |        |
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Parameter</th>
+    <th colspan=5>Description</th>
+  </tr>
+  <tr>
+    <td>bs-fadein</td>
+    <td>boolean</td>
+    <td colspan=5>used to fade-in the item  (not implemented) </td>
+  </tr>
+  <tr>
+    <td>bs-fadeout</td>
+    <td>boolean</td>
+    <td colspan=5>used to fade-out the item  (not implemented) </td>
+  </tr>
+  <tr>
+    <td>bs-tween</td>
+    <td>tween</td>
+    <td colspan=5>tween type  (not implemented) </td>
+  </tr>
+  <tr>
+    <td>bs-anim-to</td>
+    <td>array</td>
+    <td colspan=5>animation from current state to the new state  </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>anim</td>
+    <td colspan=2>type of property it's going to do</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>property</td>
+    <td>name of element property (style, class etc...)</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>value</td>
+    <td>value of the property</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>dur</td>
+    <td>decimal</td>
+    <td>lenght by scroll</td>
+  </tr>
+</table>
 
 Options
 -------
