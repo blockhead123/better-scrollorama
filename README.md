@@ -84,7 +84,7 @@ Item Parameters
   <tr>
     <td>bs-anim-to</td>
     <td>array</td>
-    <td colspan=5>animation from current state to the new state  </td>
+    <td colspan=5>animation from current state to the new state (not implemented) </td>
   </tr>
   <tr>
     <td></td>
@@ -118,24 +118,145 @@ Item Parameters
 Options
 -------
 
-* 'sceneName' : name of scene element
-
-    Parameters :
-    + object : element you can use either id class or anything else
-    Default : '.scene'
-    
-* 'itemName' : name of item element
-
-    Parameters :
-    + object : element you can use either id class or anything else
-    Default : '.item'
-    
-* 'parentBox' : is used to detect the parent of the plugin. used for validating the height of each of the scenes.
-
-    Parameters :
-    + object : element you can use either id class or anything else
-    Default : '.scene'
-    
+<table>
+    <tr>
+        <th>
+            Name
+        </th>
+        <th colspan=2>
+            Description
+        </th>
+    </tr>
+    <tr>
+        <td>
+            sceneName
+        </td>
+        <td colspan=2>
+            name of scene element
+        </td>
+    </tr>
+    <tr>
+        <td>
+        </td>
+        <th colspan=2>
+            Parameters
+        </th>
+    </tr>
+    <tr>
+        <td>
+        </td>
+        <td>
+            object
+        </td>
+        <td>
+            element you can use either id class or anything else
+        </td>
+    </tr>
+    <tr>
+        <td>
+        </td>
+        <td>
+            default
+        </td>
+        <td>
+            '.scene'
+        </td>
+    </tr>
+    <tr>
+        <td>
+        </td>
+    </tr>
+    <tr>
+        <th>
+            Name
+        </th>
+        <th colspan=2>
+            Description
+        </th>
+    </tr>
+    <tr>
+        <td>
+            itemName
+        </td>
+        <td colspan=2>
+            name of item element
+        </td>
+    </tr>
+    <tr>
+        <td>
+        </td>
+        <th colspan=2>
+            Parameters
+        </th>
+    </tr>
+    <tr>
+        <td>
+        </td>
+        <td>
+            object
+        </td>
+        <td>
+            element you can use either id class or anything else
+        </td>
+    </tr>
+    <tr>
+        <td>
+        </td>
+        <td>
+            default
+        </td>
+        <td>
+            '.item'
+        </td>
+    </tr>
+    <tr>
+        <td>
+        </td>
+    </tr>
+    <tr>
+        <th>
+            Name
+        </th>
+        <th colspan=2>
+            Description
+        </th>
+    </tr>
+    <tr>
+        <td>
+            parentBox
+        </td>
+        <td colspan=2>
+            is used to detect the parent of the plugin. used for validating the height of each of the scenes.
+        </td>
+    </tr>
+    <tr>
+        <td>
+        </td>
+        <th colspan=2>
+            Parameters
+        </th>
+    </tr>
+    <tr>
+        <td>
+        </td>
+        <td>
+            object
+        </td>
+        <td>
+            element you can use either id class or anything else
+        </td>
+    </tr>
+    <tr>
+        <td>
+        </td>
+        <td>
+            default
+        </td>
+        <td>
+            root object 
+        </td>
+    </tr>
+</table>
 
 Events
 -------
