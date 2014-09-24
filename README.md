@@ -145,13 +145,52 @@ Events
         'onSceneActive' : function (v) { /*make something*/ }
     });
     </script>
-
-* 'onScroll' : executed on scroll
-
-    Parameters :
-    + object : current box object
-    + returns : tweenmax object
-
+    
+<table>
+    <tr>
+        <th>
+            Name
+        </th>
+        <th colspan=2>
+            Description
+        </th>
+    </tr>
+    <tr>
+        <td>
+            onScroll
+        </td>
+        <td colspan=2>
+            executed on scroll
+        </td>
+    </tr>
+    <tr>
+        <td>
+        </td>
+        <th colspan=2>
+            Parameters
+        </th>
+    </tr>
+    <tr>
+        <td>
+        </td>
+        <td>
+            object
+        </td>
+        <td>
+            current box object
+        </td>
+    </tr>
+    <tr>
+        <td>
+        </td>
+        <td>
+            returns
+        </td>
+        <td>
+            tweenmax object
+        </td>
+    </tr>
+</table>
 
 * 'onSceneActive' : executed when there is a scene active.
 
