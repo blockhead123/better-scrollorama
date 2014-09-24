@@ -190,12 +190,44 @@ Events
             tweenmax object
         </td>
     </tr>
+    <tr>
+        <td>
+        </td>
+    </tr>
+    <tr>
+        <th>
+            Name
+        </th>
+        <th colspan=2>
+            Description
+        </th>
+    </tr>
+    <tr>
+        <td>
+            onSceneActive
+        </td>
+        <td colspan=2>
+            executed when there is a scene active.
+        </td>
+    </tr>
+    <tr>
+        <td>
+        </td>
+        <th colspan=2>
+            Parameters
+        </th>
+    </tr>
+    <tr>
+        <td>
+        </td>
+        <td>
+            object
+        </td>
+        <td>
+            current box object
+        </td>
+    </tr>
 </table>
-
-* 'onSceneActive' : executed when there is a scene active.
-
-    Parameters :
-    + object : current box object
 
 * 'onSceneLeave' : executed on animation complete.  (not implemented yet)
 
