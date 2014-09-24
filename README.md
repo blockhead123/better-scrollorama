@@ -227,9 +227,41 @@ Events
             current box object
         </td>
     </tr>
+    <tr>
+        <td>
+        </td>
+    </tr>
+    <tr>
+        <th>
+            Name
+        </th>
+        <th colspan=2>
+            Description
+        </th>
+    </tr>
+    <tr>
+        <td>
+            onSceneLeave
+        </td>
+        <td colspan=2>
+            executed on animation complete.  (not implemented yet)
+        </td>
+    </tr>
+    <tr>
+        <td>
+        </td>
+        <th colspan=2>
+            Parameters
+        </th>
+    </tr>
+    <tr>
+        <td>
+        </td>
+        <td>
+            object
+        </td>
+        <td>
+            current box object
+        </td>
+    </tr>
 </table>
-
-* 'onSceneLeave' : executed on animation complete.  (not implemented yet)
-
-    Parameters :
-    + object : current box object
